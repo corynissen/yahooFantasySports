@@ -9,7 +9,7 @@
 #' @examples
 #' player_df <- get_player_data(n=25)
 #' player_df <- get_player_data(n=25, by_position=TRUE)
-#' players
+#' get_player_data
 get_player_data <- function(n=250, by_position=FALSE){
   if(!is.numeric(n)){stop("n must be numeric")}
   if(!is.logical(by_position)){stop("by_position must be logical")}
