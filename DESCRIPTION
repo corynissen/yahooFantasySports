@@ -3,7 +3,7 @@ Title: Provide Functions To Interact With Yahoo Fantasy Sports API
 Version: 0.0.1
 Authors@R: person("Cory", "Nissen", email = "corynissen@gmail.com", role = c("aut", "cre"))
 Description: The purpose of this package i
-Depends: R (>= 3.2.3)
+Depends: R (>= 3.0.0)
 License: MIT + file LICENSE
 LazyData: true
 Imports:
