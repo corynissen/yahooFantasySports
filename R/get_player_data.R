@@ -80,7 +80,7 @@ get_player_data <- function(n=250, by_position=FALSE, year){
     for(i in 1:(n/25)){
       params <- list("status"="ALL",
                      "pos"=position,
-                     "stat1"="S_S_2015",
+                     "stat1"=paste0("S_S_", year),
                      "sort"="PR",
                      "sdir"="1",
                      "count"=((i * 25) - 25)
