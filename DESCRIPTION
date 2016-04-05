@@ -1,5 +1,5 @@
 Package: yahooFantasySports
-Title: Provide Functions To Interact With Yahoo Fantasy Sports API
+Title: Provide Functions To Scrape Data From Yahoo Fantasy Football Webpage
 Version: 0.0.1
 Authors@R: person("Cory", "Nissen", email = "corynissen@gmail.com", role = c("aut", "cre"))
 Description: The purpose of this package i
