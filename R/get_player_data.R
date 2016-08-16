@@ -16,8 +16,8 @@ get_player_data <- function(session, n=250, by_position=FALSE, year){
   if(!"session" %in% class(session)){stop("session must be of class session")}
   if(!is.numeric(n)){stop("n must be numeric")}
   if(!is.logical(by_position)){stop("by_position must be logical")}
-  if(!as.character(year) %in% c("2013", "2014", "2015")){
-    stop("year must be one of 2013, 2014, or 2015")
+  if(!as.character(year) %in% c("2013", "2014", "2015", "2016")){
+    stop("year must be one of 2013, 2014, 2015, or 2016")
   }
   
   positions <- c("QB", "WR", "TE", "RB", "DEF", "K")
@@ -91,7 +91,7 @@ get_player_data <- function(session, n=250, by_position=FALSE, year){
       if(position %in% c("QB", "WR", "RB", "TE", "O")) df <- format_df_off(df)
       if(position == "DEF") df <- format_df_def(df)
       if(position == "K") df <- format_df_k(df)
-      df_all[[position]] <- df
+      df_all[[position]] <- rbind(df_all[[position]], df)
     }
   }
   if(length(df_all) == 1){
