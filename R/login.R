@@ -21,7 +21,8 @@ login <- function(league_id, username){
   s <- rvest::html_session(url, httr::user_agent(uastring))  
   myform <- rvest::html_form(s)[[1]]
   myform <- rvest::set_values(myform, username=username)
-  s <- suppressWarnings(rvest::submit_form(s, myform, submit="signin"))
+  #s <- suppressWarnings(rvest::submit_form(s, myform, submit="signin"))
+  s <- suppressWarnings(rvest::submit_form(s, myform))
   s <- rvest::jump_to(s, s$response$url)
   myform <- rvest::html_form(s)[[1]]
   if("code" %in% names(myform$fields)){
