@@ -1,2 +1,2 @@
 # yahooFantasySports
-R package to use yahoo fantasy sports API
+R package to scrape yahoo fantasy sports data
