@@ -24,7 +24,7 @@ get_player_data <- function(session, n=250, by_position=FALSE, year){
   
   format_df_off <- function(df){
     df <- df[, -c(1,3,ncol(df))]
-    names(df) <- c("player_info", "owner", "games_played", "fan_pts", 
+    names(df) <- c("player_info", "owner", "games_played", "bye", "fan_pts", 
                    "perc_owned", "rank_proj", "rank_act", "pass_yds", 
                    "pass_td", "pass_int", 
                    "rush_att", "rush_yds", "rush_td", 
@@ -43,7 +43,7 @@ get_player_data <- function(session, n=250, by_position=FALSE, year){
   
   format_df_def <- function(df){
     df <- df[, -c(1,3,ncol(df))]
-    names(df) <- c("player_info", "owner", "games_played", "fan_pts", 
+    names(df) <- c("player_info", "owner", "games_played", "bye", "fan_pts", 
                    "perc_owned", "rank_proj", "rank_act", "pts_vs", 
                    "sack", "safe", "int", "fum_rec", 
                    "td", "blk_kick", "ret_td")
@@ -59,7 +59,7 @@ get_player_data <- function(session, n=250, by_position=FALSE, year){
   
   format_df_k <- function(df){
     df <- df[, -c(1,3,ncol(df))]
-    names(df) <- c("player_info", "owner", "games_played", "fan_pts", 
+    names(df) <- c("player_info", "owner", "games_played", "bye", "fan_pts", 
                    "perc_owned", "rank_proj", "rank_act", "fg_made_0_19", 
                    "fg_made_20_29", "fg_made_30_39", "fg_made_40_49", 
                    "fg_made_50plus", "pat_made")
